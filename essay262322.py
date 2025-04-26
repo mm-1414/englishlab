@@ -34,7 +34,7 @@ def grade_essay_with_cefr_and_model(prompt, user_essay):
 st.title("英作文 採点アプリ")
 
 prompt = st.text_area("お題(過去問など好きな問題を入力してください。例:Do the benefits of online shopping outweigh the disadvantages?)")
-user_essay = st.text_area("あなたの英作文を入力してください")
+user_essay = st.text_area("あなたの英作文を入力してください。英検準1級なら150語、広島大学なら100語です。問題に合わせてください。")
 
 if st.button("採点する"):
     if prompt and user_essay:
