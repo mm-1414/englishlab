@@ -33,7 +33,7 @@ def grade_essay_with_cefr_and_model(prompt, user_essay):
 # Streamlit画面の設計
 st.title("英作文 採点アプリ")
 
-prompt = st.text_area("お題(例:Do the benefits of online shopping outweigh the disadvantages?)")
+prompt = st.text_area("お題(過去問など好きな問題を入力してください。例:Do the benefits of online shopping outweigh the disadvantages?)")
 user_essay = st.text_area("あなたの英作文を入力してください")
 
 if st.button("採点する"):
