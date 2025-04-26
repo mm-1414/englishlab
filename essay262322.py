@@ -40,7 +40,7 @@ if st.button("採点する"):
     if prompt and user_essay:
         with st.spinner("採点中..."):
             result = grade_essay_with_cefr_and_model(prompt, user_essay)
-            st.success("採点が完了しました！")
+            st.success("採点が完了しました！コピーして保存し、暗記しましょう！")
             st.text_area("添削結果", result, height=500)
     else:
         st.warning("お題と英作文の両方を入力してください。")
