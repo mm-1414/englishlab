@@ -68,6 +68,12 @@ if name:
 
                 st.success("採点が完了しました。")
                 st.text_area("添削結果", result, height=750)
+                
+st.subheader("あなたの解答")
+st.text_area("あなたの英文", value=user_essay, height=150)
+
+st.subheader("模範解答")
+st.text_area("模範解答", value=prompt, height=150)
 
                 # ログ保存
                 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
