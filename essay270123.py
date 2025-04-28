@@ -66,14 +66,23 @@ if name:
                 )
                 result = response.choices[0].message.content
 
-                st.success("採点が完了しました。")
-                st.text_area("添削結果", result, height=750)
-                
-st.subheader("あなたの解答")
-st.text_area("あなたの英文", value=user_essay, height=150)
+　　　　　　　　　　　st.success("採点が完了しました。")
+　　　　　　　　　　　st.text_area("添削結果", result, height=750)
 
-st.subheader("模範解答")
-st.text_area("模範解答", value=prompt, height=150)
+　　　　　　　　　　　# ★ あなたの解答と模範解答
+　　　　　　　　　　　st.subheader("あなたの解答")
+　　　　　　　　　　　st.text_area("あなたの英文", value=user_essay, height=150)
+
+　　　　　　　　　　　st.subheader("模範解答")
+　　　　　　　　　　　st.text_area("模範解答", value=prompt, height=150)
+
+　　　　　　　　　　　# ★ 採点後に「保存しますか？」と聞く
+　　　　　　　　　　　save = st.radio("結果を保存してメールで受け取りますか？", ("いいえ", "はい"))
+
+　　　　　　　　　　　# ★ 「はい」を選んだらメールアドレス入力欄を出す
+　　　　　　　　　　　if save == "はい":
+                 email = st.text_input("あなたのメールアドレスを入力してください")
+                 st.info("※今はまだ送信されません（将来送信機能をつけます）")
 
                 # ログ保存
                 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
