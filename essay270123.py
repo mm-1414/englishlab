@@ -69,7 +69,7 @@ if name:
                 st.subheader("あなたの解答")
                 st.text_area("あなたの英文", value=user_essay, height=150)
 
-                st.subheader("お題と模範解答")
+                st.subheader("お題")
                 st.text_area("お題", value=prompt, height=100)
 
                 full_content = f"【お題】\\n{prompt}\\n\\n【あなたの英作文】\\n{user_essay}\\n\\n【添削結果】\\n{result}"
