@@ -14,7 +14,7 @@ st.title("英作文 採点アプリ")
 name = st.text_input("あなたの名前を入力してください")
 
 if name:
-    st.markdown("解答や解説を保存したい場合は、下にある「添削結果をダウンロードする」ボタンを使ってください。")
+    st.markdown("解答や解説を保存したい場合は、添削後に「添削結果をダウンロードする」ボタンが出ますので、それを押してください。")
     
     prompt = st.text_area("お題を入力してください(例: Do the benefits of online shopping outweigh the disadvantages?)", key="prompt")
     user_essay = st.text_area("あなたの英作文を入力してください(文字数は自由です)", key="essay")
