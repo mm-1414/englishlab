@@ -72,7 +72,8 @@ if name:
                 st.subheader("お題と模範解答")
                 st.text_area("お題", value=prompt, height=100)
 
-                st.download_button("添削結果をダウンロードする", data=result, file_name="feedback.txt")
+                full_content = f"【お題】\\n{prompt}\\n\\n【あなたの英作文】\\n{user_essay}\\n\\n【添削結果】\\n{result}"
+                st.download_button("添削結果をダウンロードする", data=full_content, file_name="feedback.txt")
 
                 st.markdown("別の問題を解きたい場合は、この画面を更新してください。(画面を下に引っ張る、または右上のぐるっとした矢印ボタンを押してください)")
 
