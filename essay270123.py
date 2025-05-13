@@ -6,7 +6,7 @@ def password_check():
     if not st.session_state["authenticated"]:
         password = st.text_input("パスワードを入力してください", type="password")
         if st.button("認証"):
-            if password == "yourpassword":  # ←ここを任意のパスワードに変更
+            if password == "goukaku0428":  # ←ここを任意のパスワードに変更
                 st.session_state["authenticated"] = True
                 st.experimental_rerun()
             else:
