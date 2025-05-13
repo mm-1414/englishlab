@@ -1,3 +1,20 @@
+# --- パスワード保護 ---
+def password_check():
+    if "authenticated" not in st.session_state:
+        st.session_state["authenticated"] = False
+
+    if not st.session_state["authenticated"]:
+        password = st.text_input("パスワードを入力してください", type="password")
+        if st.button("認証"):
+            if password == "yourpassword":  # ←ここを任意のパスワードに変更
+                st.session_state["authenticated"] = True
+                st.experimental_rerun()
+            else:
+                st.error("パスワードが間違っています。")
+
+password_check()
+if not st.session_state["authenticated"]:
+    st.stop()
 from openai import OpenAI
 import streamlit as st
 import pandas as pd
